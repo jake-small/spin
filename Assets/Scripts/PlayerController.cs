@@ -1,16 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
-  // Use this for initialization
-  void Start()
-  {
-
-  }
-
+  private const int TurnSpeed = 100;
   // Called once per frame just before any physics
   // Add custom physics here
   private void FixedUpdate()
@@ -26,19 +18,12 @@ public class PlayerController : MonoBehaviour
     if ( leftInput )
     {
       Vector3 axis = new Vector3( 0, 0, 1 );
-      transform.RotateAround( point, axis, Time.deltaTime * 60 );
+      transform.RotateAround( point, axis, Time.deltaTime * TurnSpeed );
     }
     if ( rightInput )
     {
       Vector3 axis = new Vector3( 0, 0, -1 );
-      transform.RotateAround( point, axis, Time.deltaTime * 60 );
+      transform.RotateAround( point, axis, Time.deltaTime * TurnSpeed );
     }
   }
-
-  // Update is called once per frame
-  void Update()
-  {
-
-  }
-
 }

@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NextLevel : MonoBehaviour
+public class KillPlayer : MonoBehaviour
 {
-  [SerializeField] private string nextLevel;
-
   private void OnTriggerEnter2D( Collider2D collision )
   {
     if ( collision.CompareTag( "Player" ) )
     {
-      SceneManager.LoadScene( nextLevel );
+      SceneManager.LoadScene( SceneManager.GetActiveScene().name );
     }
   }
 }
