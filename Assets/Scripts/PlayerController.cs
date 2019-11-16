@@ -2,7 +2,7 @@
 
 public class PlayerController : MonoBehaviour
 {
-  private const int TurnSpeed = 100;
+  private const int TurnSpeed = 120;
   // Called once per frame just before any physics
   // Add custom physics here
   private void FixedUpdate()
